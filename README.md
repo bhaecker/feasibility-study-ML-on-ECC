@@ -1,6 +1,6 @@
 # feasibility-study-ML-on-ECC
 ## Problem
-Many cryptography protocols utilize functions, which are easy to compute in one direction, but are hard to compute in the other direction. Such functions are called *One-way functions*.
+Many cryptography protocols utilize functions, which are easy to compute in one direction, but are hard to compute in the other direction. Such functions are called *One-way functions*. Despite the wide use of one-way functions in cryptography it is an open problem, if they really exist or if the algorithm to compute the the *hard* direction, is just not found yet. 
 ## Idea
 We would like to use ...
 ## ECC
