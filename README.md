@@ -12,10 +12,15 @@ Here we see all points of the curve with parameters ``a=2``, ``b=3`` and ``p=97`
 
 ### Multiplication
 We are interested in multipliying points aith an integer on the curve, where multiplication is defined as usual from addition. Multiplication of a point on the curve with an integer *k* yields another point on the curve. So let *P* be a point on a curve with parameters *a,b,p* and *k* some integer, then *``Q = P  k``* is easy to compute.  
-
 #### Path 
+We can visualise adding a point to itself by a path. For example if we start with the point ``P1=(17,10)`` on the curve before, we obtain ``P2 = 2 P = (32,7)`` and ``P3 = 3 P = (1,54)`` and so on until we end up with ``P1`` again. 
+![curve](https://github.com/bhaecker/feasibility-study-ML-on-ECC/blob/master/images/curve97_arrows.png)
+
+[...]
 ### Dimension reduction
+We want to see the relation between ``k`` and two points ``P``and ``Q``. Since the points are two-dimensional, we end up with 5 dimensions. Since we can not visualise 5 dimensions, we map each point of the curve to a number, or with other words, we enumerate all the points. 
 #### 3D Plot
+![curve](https://github.com/bhaecker/feasibility-study-ML-on-ECC/blob/master/images/3d_p17.png)
 #### Search Space Visualisation
 #### Correlation
 ### Supervised Learning
