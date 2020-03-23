@@ -26,4 +26,5 @@ We want to see the relation between ``k`` and two points ``P``and ``Q``. Since t
 ### Supervised Learning
 #### Classification with NN
 ### Unsupervised Learning
+For unsupervised algorithms we need a metric of how good our current solution/classification is. Unfourtunally we do not have such a measurment. PLOT y on k with x fix.
 ### Divide and Conquer approach
