@@ -50,10 +50,15 @@ Before applying algorithms on the data set, we are interested, if there are any 
 
 On the left we see the correlation matrix for the data set with two features (two curve points enumerated by an id) and on the right the correlation matrix for the data set with four features (two 2 dimensional points). 
 #### Classification with NN
-Since we have very few classes, we use a shallow fully connected neural network with two layers and 128 neurons per layer. We train on ``80%`` of the samples for ``100 epochs`` and test on ``20%``. In the following we see the accuracy (left) and the loss (right) on both sets for the data set with four features. The data set with two features shows similar characteristics. 
+Since we have very few classes, we use a shallow fully connected neural network with two layers and 128 neurons per layer. We train on ``80%`` of the samples for ``100 epochs`` and test on ``20%``. In the following we see the accuracy (left) and the loss (right) on both sets for the data set with four features. 
 
 ![curve](https://github.com/bhaecker/feasibility-study-ML-on-ECC/blob/master/images/p257ep100.png)
 
+The data set with two features shows similar characteristics. 
 ### Unsupervised Learning
-For unsupervised algorithms we need a metric of how good our current solution/classification is. Unfourtunally we do not have such a measurment. PLOT y on k with x fix.
+For unsupervised algorithms we need a metric of how good our current solution/classification is. In most cases, a form of derivation is used, to point the algorithm in the right direction. Since our function is non continous, we can not rely on that neat performance measure.  
+
+PLOT y on k with x fix.
+
+Unfourtunally, we do not find a measurment of how good our current solution is. 
 ### Divide and Conquer approach
