@@ -46,6 +46,7 @@ Even though we can not takle our problem with supervised learning, we want to se
 #### Correlation
 Before applying algorithms on the data set, we are interested, if there are any correlations between our features. For that, we calculate the pearson coefficient of both data sets.
 
+![curve](https://github.com/bhaecker/feasibility-study-ML-on-ECC/blob/master/images/corrID257.png)
 
 On the left we see the correlation matrix for the data set with two features (two curve points enumerated by an id) and on the right the correlation matrix for the data set with four features (two 2 dimensional points). 
 #### Classification with NN
