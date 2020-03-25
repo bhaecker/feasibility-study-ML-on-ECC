@@ -22,10 +22,16 @@ Note that our path ends at ``P8 = 8 P1 = (0,87)``, one step before we end up in 
 We want to see the relation between ``k`` and two points ``P``and ``Q``. For that we enumerate all the points. Instead of ``5`` dimensions (two per point plus one for ``k``) we end up with ``3`` dimensions. We refer to an enumerated ``P`` as ``x`` and to ``Q`` as ``y``. 
 #### 3D Plot
 For ``a=2``, ``b=3`` and ``p=17`` the surface plot of all points ``y``, which are obtained multiplying all ``x`` by all ``k``'s looks like the following:
+
 ![curve](https://github.com/bhaecker/feasibility-study-ML-on-ECC/blob/master/images/3d_p17.png)
 
 Note that we are working with discrete points, but connect to neighbouring points with a line. 
 #### Search Space Visualisation
+Since we are not interested in calculating ``y`` as a product from ``x`` and an integer ``k`` (this is the easy direction), but to find ``k`` if given ``x`` and ``y`` for which ``x k = y`` holds, we take a look at our search space. Fixing ``a=2``, ``b=3`` and ``p=97``, we produce an adjacency matrix, where the rows corespond to ``x`` and the columns to ``y``. An entry denotes ``k`` for which ``x k = y`` holds. We heat colour the matrix:
+
+![curve](https://github.com/bhaecker/feasibility-study-ML-on-ECC/blob/master/images/3d_p17.png)
+
+Since there might be more ``k``'s for which the realtion holds, we take the highest of these. 
 #### Correlation
 ### Supervised Learning
 #### Classification with NN
