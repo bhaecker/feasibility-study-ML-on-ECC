@@ -49,7 +49,7 @@ Before applying algorithms on the data set, we are interested, if there are any 
 
 On the left we see the correlation matrix for the data set with two features (two curve points enumerated by an id) and on the right the correlation matrix for the data set with four features (two 2 dimensional points). 
 #### Classification with NN
-Since we have very few classes, we use a shallow fully connected neural network with two layers and 128 neurons per layer. We train on ``80%`` of the samples for ``200 epochs`` and test on ``20%``. In the following we see the accuracy (left) and the loss (right) on both sets for the data set with four features. The data set with two features shows similar characteristics. 
+Since we have very few classes, we use a shallow fully connected neural network with two layers and 128 neurons per layer. We train on ``80%`` of the samples for ``100 epochs`` and test on ``20%``. In the following we see the accuracy (left) and the loss (right) on both sets for the data set with four features. The data set with two features shows similar characteristics. 
 
 ### Unsupervised Learning
 For unsupervised algorithms we need a metric of how good our current solution/classification is. Unfourtunally we do not have such a measurment. PLOT y on k with x fix.
