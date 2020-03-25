@@ -56,9 +56,11 @@ Since we have very few classes, we use a shallow fully connected neural network 
 
 The data set with two features shows similar characteristics. 
 ### Unsupervised Learning
-For unsupervised algorithms we need a metric of how good our current solution/classification is. In most cases, a form of derivation is used, to point the algorithm in the right direction. Since our function is non continous, we can not rely on that neat performance measure.  
-
-PLOT y on k with x fix.
+For unsupervised algorithms we need a metric of how good our current solution/classification is. In most cases, a form of derivation is used, to point the algorithm in the right direction. Since our function is non continous, we can not rely on that neat performance measure.
+To see how y depends on k, we fix an point x on the curve and plot ``y=x k`` in depending on ``k``.
+Here we fix the point ``P=(17,87)`` with ``id=3`` on the curve with parameters ``a=2``, ``b=3`` and ``p=97`` and analyse how ``y`` changes, when we in- or decrease ``k``.
+ 
+![curve](https://github.com/bhaecker/feasibility-study-ML-on-ECC/blob/master/images/xfix.png)
 
 Unfourtunally, we do not find a measurment of how good our current solution is. 
 ### Divide and Conquer approach
