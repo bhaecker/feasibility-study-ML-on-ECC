@@ -18,9 +18,12 @@ We can visualise adding a point to itself by a path. For example if we start wit
 
 [...]
 ### Dimension reduction
-We want to see the relation between ``k`` and two points ``P``and ``Q``. Since the points are two-dimensional, we end up with 5 dimensions. Since we can not visualise 5 dimensions, we map each point of the curve to a number, or with other words, we enumerate all the points. 
+We want to see the relation between ``k`` and two points ``P``and ``Q``. For that we enumerate all the points. Instead of ``5`` dimensions (two per point plus one for ``k``) we end up with ``3`` dimensions. We refer to an enumerated ``P`` as ``x`` and to ``Q`` as ``y``. 
 #### 3D Plot
+For ``a=2``, ``b=3`` and ``p=17`` the surface plot of all points ``y``, which are obtained multiplying all ``x`` by all ``k``'s looks like the following:
 ![curve](https://github.com/bhaecker/feasibility-study-ML-on-ECC/blob/master/images/3d_p17.png)
+
+Note that we are working with discrete points, but connect to neighbouring points with a line. 
 #### Search Space Visualisation
 #### Correlation
 ### Supervised Learning
