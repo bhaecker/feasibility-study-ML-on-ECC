@@ -55,6 +55,7 @@ Since we have very few classes, we use a shallow fully connected neural network 
 ![curve](https://github.com/bhaecker/feasibility-study-ML-on-ECC/blob/master/images/p257ep100.png)
 
 The data set with two features shows similar characteristics. 
+The overall accuracy stays around ``~1.5%``. Different network architectures and changes in other hyper-parameters, do not improve the performance.
 ### Unsupervised Learning
 For unsupervised algorithms we need a metric of how good our current solution/classification is. In most cases, a form of derivation is used, to point the algorithm in the right direction. Since our function is non continous, we can not rely on that neat performance measure.
 To see how y depends on k, we fix an point x on the curve and plot ``y=x k`` in depending on ``k``.
@@ -64,3 +65,4 @@ Here we fix the point ``P=(17,87)`` with ``id=3`` on the curve with parameters `
 
 Unfourtunally, we do not find a measurment of how good our current solution is. 
 ### Divide and Conquer approach
+It turns out, that working with parameter ``k`` as label is not fruitful. In the next approach, we want to use an algorithm to reduce our search space. We proceed in a divide and conquer matter, which means that for two points ``P`` and ``Q`` we decide if ``k`` lies n the left half or right half of the interval of all possible ``k``'s. We do this, until we reduced the interval of possible ``k``'s so far, that we can brute-force ``k`` times ``P``. Even though the number of points on a curve is not equal the generating prime number, they are of the same order of magnintute. The exact number of points can be derived with Schoof's algorithm. For an estimate on how often we have to devide the search space, we use ``p`` instead of the real number of points. It turns out that after ``230`` times we end up with a search space small enough, to brute force it. 
