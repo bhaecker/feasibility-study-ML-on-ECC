@@ -11,11 +11,12 @@ Here we see all points of the curve with parameters ``a=2``, ``b=3`` and ``p=97`
 
 
 ### Multiplication
-We are interested in multipliying points aith an integer on the curve, where multiplication is defined from addition as usual. Multiplication of a point on the curve with an integer *k* yields another point on the curve. So let *P* be a point on a curve with parameters *a,b,p* and *k* some integer, then *``Q = P  k``* is easy to compute.  
+We are interested in multipliying points on a curve with an integer, where multiplication is defined from addition as usual. Multiplication of a point on the curve with an integer *k* yields another point on the curve. So let *P* be a point on a curve with parameters *a,b,p* and *k* some integer, then *``Q = P  k``* is easy to compute.  
 #### Path 
-We can visualise adding a point to itself by a path. For example if we start with the point ``P1=(17,10)`` on the curve before, we obtain ``P2 = 2 P = (32,7)`` and ``P3 = 3 P = (1,54)`` and so on until we end up with ``P1`` again. 
+We can visualise adding a point to itself by a path. For example if we start with the point ``P1=(17,10)`` on the curve before, we obtain ``P2 = 2 P1 = (32,7)`` and ``P3 = 3 P1 = (1,54)`` and so on until we end up with ``P1`` again. 
 ![curve](https://github.com/bhaecker/feasibility-study-ML-on-ECC/blob/master/images/curve97_arrows.png)
 
+Note that our path ends at ``P8 = 8 P1 = (0,87)``, one step before we end up in ``P1`` again.
 [...]
 ### Dimension reduction
 We want to see the relation between ``k`` and two points ``P``and ``Q``. For that we enumerate all the points. Instead of ``5`` dimensions (two per point plus one for ``k``) we end up with ``3`` dimensions. We refer to an enumerated ``P`` as ``x`` and to ``Q`` as ``y``. 
