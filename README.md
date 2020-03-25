@@ -9,6 +9,7 @@ Here we see all points of the curve with parameters ``a=2``, ``b=3`` and ``p=97`
 
 ![curve](https://github.com/bhaecker/feasibility-study-ML-on-ECC/blob/master/images/curve97.png)
 
+For being cryptographically relevant, the curve has to be chosen with a very large prime. For the curve ``secp256k1`` used in Bitcoin for example, ``p`` is equal to ``2^256 - 2^32 - 977``. For the sake of understandability, we analyse curves with much lower prime numbers in the following and hope that we can transfer the insides to curves over higher primes.   
 
 ### Multiplication
 We are interested in multipliying points on a curve with an integer, where multiplication is defined from addition as usual. Multiplication of a point on the curve with an integer *k* yields another point on the curve. So let *P* be a point on a curve with parameters *a,b,p* and *k* some integer, then *``Q = P  k``* is easy to compute.  
@@ -33,9 +34,13 @@ Since we are not interested in calculating ``y`` as a product from ``x`` and an 
 
 
 A ``k`` of ``-10`` (the dark blue regions) denotes there is no ``k``, which satisfies the relation.
-On the other hand there might be more ``k``'s for which the realtion holds, so we take the highest of these. 
+On the other hand, there might be more ``k``'s for which the realtion holds, so we take the highest of these. 
 
-#### Correlation
+## Classification
+After getting comfortable with the curve and the problem we'd like to solve, we are ready to takle it, by reformulating it as a classification problem. 
+The idea is straightforward [...] 
+### Correlation
+Before applying algorithms on the data set, we are interested if there are any correlations between our features. For that, we calculate the pearson coefficient. 
 ### Supervised Learning
 #### Classification with NN
 ### Unsupervised Learning
