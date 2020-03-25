@@ -31,7 +31,9 @@ Since we are not interested in calculating ``y`` as a product from ``x`` and an 
 
 ![curve](https://github.com/bhaecker/feasibility-study-ML-on-ECC/blob/master/images/3d_p17.png)
 
-Since there might be more ``k``'s for which the realtion holds, we take the highest of these. 
+A ``k`` of ``-10`` (the dark blue regions) denotes there is no ``k``, which satisfies the relation.
+On the other hand there might be more ``k``'s for which the realtion holds, so we take the highest of these. 
+
 #### Correlation
 ### Supervised Learning
 #### Classification with NN
