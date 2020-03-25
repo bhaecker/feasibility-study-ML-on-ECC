@@ -23,7 +23,7 @@ We want to see the relation between ``k`` and two points ``P``and ``Q``. For tha
 #### 3D Plot
 For ``a=2``, ``b=3`` and ``p=17`` the surface plot of all points ``y``, which are obtained multiplying all ``x`` by all ``k``'s looks like the following:
 
-![curve](https://github.com/bhaecker/feasibility-study-ML-on-ECC/blob/master/images/3d_p17.png)
+![curve](https://github.com/bhaecker/feasibility-study-ML-on-ECC/blob/master/images/matrix_p17.png)
 
 Note that we are working with discrete points, but connect to neighbouring points with a line. 
 #### Search Space Visualisation
