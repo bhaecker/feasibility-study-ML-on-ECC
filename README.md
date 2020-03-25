@@ -41,15 +41,15 @@ After getting comfortable with the curve and the problem we'd like to solve, we 
 The idea is straightforward [...] 
 ### Supervised Learning
 Supervised learning uses labeled instances. In order to classify an unseen instance, a supervised algorithm should have seen samples of the class it belongs to, during the training process. For a curve with ``p = 2^256 - 2^32 - 977`` this is not possible, since there are just too many possible ``k``'s, respectively classes.  
-Even though we can not takle our problem with supervised learning, we want to see how a neural network performes on a curve, where its possible to see all classes during the training process. For that we fix the curve with parameters ``a=2``, ``b=3`` and ``p=257``. This gives us ``239`` points. The resulting data set has ``57600`` samples. 
+Even though we can not takle our problem with supervised learning, we want to see how a neural network performes on a curve, where its possible to see all classes, during the training process. For that we fix a curve with parameters ``a=2``, ``b=3`` and ``p=257``. This gives us ``239`` points. The resulting data set has ``57600`` samples. 
 
 #### Correlation
-Before applying algorithms on the data set, we are interested if there are any correlations between our features. For that, we calculate the pearson coefficient of both data sets.
+Before applying algorithms on the data set, we are interested, if there are any correlations between our features. For that, we calculate the pearson coefficient of both data sets.
 
 
-On the left we see the correlation matrix for the data set with two features (curve points enumerated by an id) and on the right the correlation matrix for the data set with four features (two 2 dimensional points). 
+On the left we see the correlation matrix for the data set with two features (two curve points enumerated by an id) and on the right the correlation matrix for the data set with four features (two 2 dimensional points). 
 #### Classification with NN
-Since we have very few classes, we use a shallow fully connected neural network with two layers and 128 neurons per layer. We train on ``80%`` of the samples for 200 epochs and test on ``20%``. In the following we see the accuracy (left) and the loss (right) on both sets.
+Since we have very few classes, we use a shallow fully connected neural network with two layers and 128 neurons per layer. We train on ``80%`` of the samples for ``200 epochs`` and test on ``20%``. In the following we see the accuracy (left) and the loss (right) on both sets for the data set with four features. The data set with two features shows similar characteristics. 
 
 ### Unsupervised Learning
 For unsupervised algorithms we need a metric of how good our current solution/classification is. Unfourtunally we do not have such a measurment. PLOT y on k with x fix.
