@@ -52,6 +52,8 @@ On the left we see the correlation matrix for the data set with two features (tw
 #### Classification with NN
 Since we have very few classes, we use a shallow fully connected neural network with two layers and 128 neurons per layer. We train on ``80%`` of the samples for ``100 epochs`` and test on ``20%``. In the following we see the accuracy (left) and the loss (right) on both sets for the data set with four features. The data set with two features shows similar characteristics. 
 
+![curve](https://github.com/bhaecker/feasibility-study-ML-on-ECC/blob/master/images/p257ep100.png)
+
 ### Unsupervised Learning
 For unsupervised algorithms we need a metric of how good our current solution/classification is. Unfourtunally we do not have such a measurment. PLOT y on k with x fix.
 ### Divide and Conquer approach
