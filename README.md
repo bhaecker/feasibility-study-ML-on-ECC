@@ -41,7 +41,8 @@ On the other hand, there might be more ``k``'s for which the realtion holds, so 
 
 ## Classification
 After getting comfortable with the curve and the problem we'd like to solve, we are ready to takle it, by reformulating it as a classification problem. 
-The idea is straightforward [...] 
+The idea is straightforward: While we can compute the first table from left to right easily  
+
 | P1  | P2  | k  | Q1  | Q2  |
 |-----|-----|----|-----|-----|
 | 2   | 23  | 0  | Inf | Inf |
@@ -49,14 +50,16 @@ The idea is straightforward [...]
 | 2   | 23  | 2  | 222 | 100 |
 | ... | ... | .. | ... | ... |
 
-to
+, we can use the the second table as training data (where the last column is our target) for a classificastion algorithm.
 
-| P2   |   P1  | Q1   |  Q2   | k  |
+| P1  | P2  | Q1  |  Q2 | k  |
 |-----|-----|-----|-----|----|
 | 2   | 23  | Inf | Inf | 0  |
 | 2   | 23  | 2   | 23  | 1  |
 | 2   | 23  | 222 | 100 | 2  |
 | ... | ... | ... | ... | .. |
+
+
 
 ### Supervised Learning
 Supervised learning uses labeled instances. In order to classify an unseen instance, a supervised algorithm should have seen samples of the class it belongs to, during the training process. For a curve with ``p = 2^256 - 2^32 - 977`` this is not possible, since there are just too many possible ``k``'s, respectively classes.  
