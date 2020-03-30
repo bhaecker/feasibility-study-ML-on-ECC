@@ -42,6 +42,14 @@ On the other hand, there might be more ``k``'s for which the realtion holds, so 
 ## Classification
 After getting comfortable with the curve and the problem we'd like to solve, we are ready to takle it, by reformulating it as a classification problem. 
 The idea is straightforward [...] 
+
+| P   |     | Q   |     | k  |
+|-----|-----|-----|-----|----|
+| 2   | 23  | Inf | Inf | 0  |
+| 2   | 23  | 2   | 23  | 1  |
+| 2   | 23  | 222 | 100 | 2  |
+| ... | ... | ... | ... | .. |
+
 ### Supervised Learning
 Supervised learning uses labeled instances. In order to classify an unseen instance, a supervised algorithm should have seen samples of the class it belongs to, during the training process. For a curve with ``p = 2^256 - 2^32 - 977`` this is not possible, since there are just too many possible ``k``'s, respectively classes.  
 Even though we can not takle our problem with supervised learning, we want to see how a neural network performes on a curve, where its possible to see all classes, during the training process. For that we fix a curve with parameters ``a=2``, ``b=3`` and ``p=257``. This gives us ``239`` points. The resulting data set has ``57600`` samples. 
