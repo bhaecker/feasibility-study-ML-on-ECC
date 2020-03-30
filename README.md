@@ -50,7 +50,7 @@ The idea is straightforward: While we can compute the following table easily fro
 | 2   | 23  | 2  | 222 | 100 |
 | ... | ... | .. | ... | ... |
 
-, we can use the second table as training data (where the last column is our target) for a classificastion algorithm.
+, we can use the second table as training data (where the last column is our target) for a classification algorithm.
 
 | P1  | P2  | Q1  |  Q2 | k  |
 |-----|-----|-----|-----|----|
