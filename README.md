@@ -50,7 +50,7 @@ The idea is straightforward: While we can compute the following table easily fro
 | 2   | 23  | 2  | 222 | 100 |
 | ... | ... | .. | ... | ... |
 
-, we can use the the second table as training data (where the last column is our target) for a classificastion algorithm.
+, we can use the second table as training data (where the last column is our target) for a classificastion algorithm.
 
 | P1  | P2  | Q1  |  Q2 | k  |
 |-----|-----|-----|-----|----|
@@ -59,7 +59,7 @@ The idea is straightforward: While we can compute the following table easily fro
 | 2   | 23  | 222 | 100 | 2  |
 | ... | ... | ... | ... | .. |
 
-Note that the tables are identical up to the order of their columns.
+Note, that the tables are identical up to the order of their columns.
 
 ### Supervised Learning
 Supervised learning uses labeled instances. In order to classify an unseen instance, a supervised algorithm should have seen samples of the class it belongs to, during the training process. For a curve with ``p = 2^256 - 2^32 - 977`` this is not possible, since there are just too many possible ``k``'s, respectively classes.  
