@@ -42,8 +42,16 @@ On the other hand, there might be more ``k``'s for which the realtion holds, so 
 ## Classification
 After getting comfortable with the curve and the problem we'd like to solve, we are ready to takle it, by reformulating it as a classification problem. 
 The idea is straightforward [...] 
+| P1  | P2  | k  | Q1  | Q2  |
+|-----|-----|----|-----|-----|
+| 2   | 23  | 0  | Inf | Inf |
+| 2   | 23  | 1  | 2   | 23  |
+| 2   | 23  | 2  | 222 | 100 |
+| ... | ... | .. | ... | ... |
 
-| P   |     | Q   |     | k  |
+to
+
+| P2   |   P1  | Q1   |  Q2   | k  |
 |-----|-----|-----|-----|----|
 | 2   | 23  | Inf | Inf | 0  |
 | 2   | 23  | 2   | 23  | 1  |
