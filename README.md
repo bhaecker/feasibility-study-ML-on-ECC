@@ -15,10 +15,10 @@ For being cryptographically relevant, the curve has to be chosen with a very lar
 ### Multiplication
 We are interested in multipliying points on a curve with an integer, where multiplication is defined from addition as usual. Multiplication of a point on the curve with an integer ``k`` yields another point on the curve. So let *P* be a point on a curve with parameters ``a,b,p`` and ``k`` some integer, then ``Q = P*k`` is easy to compute.  
 #### Path 
-We can visualise adding a point to itself by a path. For example if we start with the point ``P1=(17,10)`` on the curve before, we obtain ``P2 = 2 P1 = (32,7)`` and ``P3 = 3 P1 = (1,54)`` and so on until we end up in ``P1`` again. 
+We can visualise adding a point to itself by a path. For example if we start with the point ``P1=(17,10)`` on the curve before, we obtain ``P2 = 2*P1 = (32,7)`` and ``P3 = 3*P1 = (1,54)`` and so on until we end up in ``P1`` again. 
 ![curve](https://github.com/bhaecker/feasibility-study-ML-on-ECC/blob/master/images/curve97_arrows.png)
 
-Note that our path ends at ``P8 = 8 P1 = (0,87)``, one step before we end up in ``P1`` again.
+Note that our path ends at ``P8 = 8*P1 = (0,87)``, one step before we end up in ``P1`` again.
 We are *not* interested in inversing the path, but in finding the number of (linear) path sections between two given points, which is the desired ``k`` we are ultimately looking for. 
 
 ### Dimension reduction
@@ -49,7 +49,7 @@ The idea is straightforward: While we can compute the following table easily fro
 | 2   | 23  | 2  | 222 | 100 |
 | ... | ... | .. | ... | ... |
 
-, we can use the second table as training data (four features and the last column as target) for a classification algorithm.
+we can use the second table as training data (four features and the last column as target) for a classification algorithm.
 
 | P1  | P2  | Q1  |  Q2 | k  |
 |-----|-----|-----|-----|----|
@@ -91,7 +91,7 @@ The data set with two features shows similar characteristics.
 The overall accuracy stays around ``~1.5%``. Different network architectures and changes in other hyper-parameters, do not improve the performance.
 ### Unsupervised Learning
 For unsupervised algorithms we need a metric of how good our current solution/classification is. In most cases, a form of derivation is used, to point the algorithm in the right direction. Since our function is non continous, we can not rely on that neat performance measure.
-To see how ``y`` depends on ``k``, we fix an point ``x`` on the curve and plot ``y=x k`` in depending on ``k``.
+To see how ``y`` depends on ``k``, we fix an point ``x`` on the curve and plot ``y=x*k`` in depending on ``k``.
 Here we fix the point ``P=(17,87)`` with ``id=3`` on the curve with parameters ``a=2``, ``b=3`` and ``p=97`` and analyse how ``y`` changes, when we in- or decrease ``k``.
  
 ![curve](https://github.com/bhaecker/feasibility-study-ML-on-ECC/blob/master/images/xfix.png)
