@@ -1,9 +1,9 @@
 # feasibility-study-ML-on-ECC
 ## Problem
-Many cryptography protocols utilize functions, which are easy to compute in one direction, but are hard to compute in the other direction. Such functions are called *One-way functions*. Despite the wide use of one-way functions in cryptography it is an open problem, if they really exist or if the algorithm to compute the *hard* direction, is just not found yet. 
+Many cryptography protocols utilize functions, which are easy to compute in one direction, but are hard to compute in the other direction. Such functions are called *one-way functions*. Despite the wide use of one-way functions in cryptography, it is an open problem, if they really exist or if the algorithm to compute the *hard* direction, is just not found yet. 
 ## Idea 
 We would like to use ... . For that we state the hypothesis (1), that the inverse function, which computes the hard direction, is not random, but exhibits certain patterns. If this is the case, we state another hypothesis (2), which says, that modern machine learning approaches, should reveal these patterns. 
-In order to pre-test our hypotheses, we look into one famous one-way function, namely the *multiplication on a ellipctic curve*. The hard, inverse operation is *division on a ellipctic curve*. In cryptography protocols the elliptic curve is generated over a very large field. For the pre-testing we use elliptic curves over much smaller fields, but keep in mind to generalize our approaches to much larger fields.
+Within the scope of a feasibility study of utilizing the correctness of these hypotheses, we look into one famous one-way function, namely the *multiplication on a ellipctic curve*. The hard, inverse operation is *division on a ellipctic curve*. In cryptography protocols the elliptic curve is generated over a very large field. For our experiments, we use elliptic curves over much smaller fields, but keep in mind to generalize our approaches to much larger fields.
 
 
 ## ECC
@@ -17,7 +17,7 @@ For being cryptographically relevant, the curve has to be chosen with a very lar
 ### Multiplication
 We are interested in multipliying points on a curve with an integer, where multiplication is defined from addition as usual. Multiplication of a point on the curve with an integer ``k`` yields another point on the curve. So let *P* be a point on a curve with parameters ``a,b,p`` and ``k`` some integer, then ``Q = P  k`` is easy to compute.  
 #### Path 
-We can visualise adding a point to itself by a path. For example if we start with the point ``P1=(17,10)`` on the curve before, we obtain ``P2 = 2 P1 = (32,7)`` and ``P3 = 3 P1 = (1,54)`` and so on until we end up with ``P1`` again. 
+We can visualise adding a point to itself by a path. For example if we start with the point ``P1=(17,10)`` on the curve before, we obtain ``P2 = 2 P1 = (32,7)`` and ``P3 = 3 P1 = (1,54)`` and so on until we end up in ``P1`` again. 
 ![curve](https://github.com/bhaecker/feasibility-study-ML-on-ECC/blob/master/images/curve97_arrows.png)
 
 Note that our path ends at ``P8 = 8 P1 = (0,87)``, one step before we end up in ``P1`` again.
@@ -61,7 +61,7 @@ The idea is straightforward: While we can compute the following table easily fro
 
 Note, that the tables are identical up to the order of their columns.
 
-If we use the enumerated points instead of the actual two dimensional points, we train on a data set, with two features and one target:
+If we use the enumerated points instead of the actual two dimensional points, we train on a data set with two features and one target:
 
 | x  | y  | k  |
 |-----|-----|-----|
