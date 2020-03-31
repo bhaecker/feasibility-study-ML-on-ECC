@@ -90,13 +90,3 @@ plt.ylabel('loss')
 plt.xlabel('epoch')
 plt.legend(['train', 'test'], loc='upper left')
 plt.show()
-
-
-#not needed:
-def train(a,b,p,number_samples,length_samples,model,epochs_per_sample):
-    for i in range(number_samples):
-        print(i)
-        samples = makesamples(a, b, p, length_samples)
-        history = model.fit(samples.iloc[:,0:4], samples.iloc[:,-1], validation_split=0.2, epochs=epochs_per_sample, batch_size=20)
-
-    return(history)
