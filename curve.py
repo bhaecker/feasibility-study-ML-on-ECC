@@ -141,21 +141,3 @@ def mult(n,xp,yp,a,p):
         x,y = add(xp,yp,x,y,a,p)
     return(x,y)
 
-###not needed:
-
-def curve(a,b,p): # gives all points on a curve y^2=x^3+ax+b mod p
-    Y = pd.DataFrame({'Left': [y for y in range(p)], 'Right': [power(y,2,p) for y in range(p)]})
-    X = pd.DataFrame({ 'Left': [x for x in range(p)], 'Right': [ (power(x,3,p) + a * x+ b) % p for x in range(p)]})
-    Z = pd.merge(X, Y, on='Right')[['Left_x','Left_y']] #look for common values on the right side and report only the corresponding x and y values
-    Z.columns = ['x','y'] #rename columns
-
-    Inf = pd.DataFrame([[None, None]],columns=['x','y']) #create point at infinity
-    Z = Z.append(Inf,ignore_index=True) #add point at infinity
-    return(Z)
-
-
-def make_ds(a,b,p): #returns a dataframe by multiplying all points of the curve with 1..p
-    X = curve(a,b,p)
-    Y = pd.DataFrame({ i: [ mult(i,X.iat[j,0],X.iat[j,1],a,p) for j in range(0,len(X.index))] for i in range(1,p+1)})
-    return(Y)
-
