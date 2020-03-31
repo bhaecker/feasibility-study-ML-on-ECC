@@ -54,21 +54,3 @@ ax.set_zlabel('Y')
 ax.set_title('3D contour')
 plt.show()
 
-###not needed:
-
-sys.exit()
-
-#sort by k
-sorter = k_points.argsort()
-
-fig = plt.figure()
-
-ax = plt.axes(projection="3d")
-
-ax.set_xlabel('x')
-ax.set_ylabel('k')
-ax.set_zlabel('y')
-
-ax.scatter3D(x_points, k_points, y_points,s=1.3, c=k_points)
-plt.show()
-
