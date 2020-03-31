@@ -71,11 +71,11 @@ If we use the enumerated points instead of the actual two dimensional points, we
 | 0   | 217  | 2 | 
 | ... | ... | ... | 
 
-For example the first line reads as: the ``0``th point ('``x``') times ``0`` ('``k``') equals the ``239``th point ('``y``') on the curve.
+For example the first line reads as: the ``0``th point (``'x'``) times ``0`` (``'k'``) equals the ``239``th point (``'y'``) on the curve.
 
 ### Supervised Learning
 Supervised learning uses labeled instances. In order to classify an unseen instance, a supervised algorithm should have seen samples of the class it belongs to, during the training process. For a curve with ``p = 2^256 - 2^32 - 977`` this is not possible, since there are just too many possible ``k``'s, respectively classes.  
-Even though we can not takle our problem with supervised learning, we want to see how a neural network performes on a curve, where its possible to see all classes, during the training process. For that we fix a curve with parameters ``a=2``, ``b=3`` and ``p=257``. This gives us ``239`` points. The resulting data set has ``57600`` samples. 
+Even though we can not takle our problem with supervised learning, we want to see how a neural network performes on a curve, where its possible to see all classes, during the training process. For that we fix a curve with parameters ``a=2``, ``b=3`` and (small) ``p=257``. This gives us ``239`` points. The resulting data set has ``57600`` samples. 
 The first few lines from the data set can be seen in the tables above.
 
 #### Correlation
