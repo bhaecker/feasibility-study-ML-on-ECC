@@ -71,7 +71,7 @@ If we use the enumerated points instead of the actual two dimensional points, we
 | 0   | 217  | 2 | 
 | ... | ... | ... | 
 
-For example the first line reads as: the ``0``th point (``x``) times ``0`` (``k``) equals the ``239``th (``y``) point on the curve.
+For example the first line reads as: the ``0``th point ('``x``') times ``0`` ('``k``') equals the ``239``th point ('``y``') on the curve.
 
 ### Supervised Learning
 Supervised learning uses labeled instances. In order to classify an unseen instance, a supervised algorithm should have seen samples of the class it belongs to, during the training process. For a curve with ``p = 2^256 - 2^32 - 977`` this is not possible, since there are just too many possible ``k``'s, respectively classes.  
