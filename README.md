@@ -38,7 +38,7 @@ Since we are not interested in calculating ``y`` as a product from ``x`` and an 
 
 
 A ``k`` of ``-10`` (the dark blue regions) denotes there is no ``k``, which satisfies the relation.
-On the other hand, there might be more ``k``'s for which the realtion holds, so we take the highest of these. 
+On the other hand, there might be more ``k``'s for which the relation holds, so we take the highest of these. 
 
 ## Classification
 After getting comfortable with the curve and the problem we'd like to solve, we are ready to takle it, by reformulating it as a classification problem. 
