@@ -21,7 +21,8 @@ We can visualise adding a point to itself by a path. For example if we start wit
 ![curve](https://github.com/bhaecker/feasibility-study-ML-on-ECC/blob/master/images/curve97_arrows.png)
 
 Note that our path ends at ``P8 = 8 P1 = (0,87)``, one step before we end up in ``P1`` again.
-[...]
+We are *not* interested in inversing the path, but in finding the number of (linear) path sections between two given points. 
+
 ### Dimension reduction
 We want to see the relation between ``k`` and two points ``P``and ``Q``. For that we enumerate all the points. Instead of ``5`` dimensions (two per point plus one for ``k``) we end up with ``3`` dimensions. We refer to an enumerated ``P`` as ``x`` and to ``Q`` as ``y``. 
 #### 3D Plot
